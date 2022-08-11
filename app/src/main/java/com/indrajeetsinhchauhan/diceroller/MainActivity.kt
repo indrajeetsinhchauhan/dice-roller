@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.indrajeetsinhchauhan.diceroller.databinding.ActivityMainBinding
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = "Dice Rolled!"
+        val randomInt = Random.nextInt(6) + 1
+        resultText.text = randomInt.toString()
     }
 }
